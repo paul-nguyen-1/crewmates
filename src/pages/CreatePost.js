@@ -29,7 +29,7 @@ const CreatePost = () => {
       })
       .select();
 
-    window.location = "/";
+    window.location = "/gallery";
 
     setInput({
       title: "",

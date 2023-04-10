@@ -20,13 +20,13 @@ const EditPost = ({ data }) => {
       })
       .eq("id", id);
 
-    window.location = "/";
+    window.location = "/gallery";
   };
 
   const deletePost = async (e) => {
     e.preventDefault();
     await supabase.from("Posts").delete().eq("id", id);
-    window.location = "/";
+    window.location = "/gallery";
   };
 
   const handleChange = (e) => {
