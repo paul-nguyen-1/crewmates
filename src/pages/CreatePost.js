@@ -6,7 +6,7 @@ const CreatePost = () => {
   const [input, setInput] = useState({
     title: "",
     author: "",
-    description: "",
+    color: "",
   });
 
   const handleChange = (e) => {
@@ -25,7 +25,7 @@ const CreatePost = () => {
       .insert({
         title: input.title,
         author: input.author,
-        description: input.description,
+        color: input.color,
       })
       .select();
 
@@ -34,45 +34,90 @@ const CreatePost = () => {
     setInput({
       title: "",
       author: "",
-      description: "",
+      color: "",
     });
   };
 
   return (
-    <div>
+    <div className="createPost">
       <form>
-        <label for="title">Title</label> <br />
-        <input
-          type="text"
-          id="title"
-          name="title"
-          value={input.title}
-          onChange={handleChange}
-        />
-        <br />
-        <br />
-        <label for="author">Author</label>
-        <br />
-        <input
-          type="text"
-          id="author"
-          name="author"
-          value={input.author}
-          onChange={handleChange}
-        />
-        <br />
-        <br />
-        <label for="description">Description</label>
-        <br />
-        <textarea
-          rows="5"
-          cols="50"
-          id="description"
-          name="description"
-          value={input.description}
-          onChange={handleChange}
-        ></textarea>
-        <br />
+        <div className="postCardContainer">
+          <div className="postCard">
+            <label for="title">Crewmate:</label>
+            <input
+              type="text"
+              id="title"
+              name="title"
+              value={input.title}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="postCard">
+            <label for="author">Speed:</label>
+            <input
+              type="number"
+              id="author"
+              name="author"
+              value={input.author}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="postCard" style={{ height: "100%", width: "175px" }}>
+            <label for="description">Color:</label>
+            <div className="radioButtons">
+              <p className="radio">
+                <input
+                  type="radio"
+                  value="Red"
+                  name="color"
+                  checked={input.color === "Red"}
+                  onChange={handleChange}
+                />{" "}
+                Red
+              </p>
+              <p className="radio">
+                <input
+                  type="radio"
+                  value="Green"
+                  name="color"
+                  checked={input.color === "Green"}
+                  onChange={handleChange}
+                />{" "}
+                Green
+              </p>
+              <p className="radio">
+                <input
+                  type="radio"
+                  value="Yellow"
+                  name="color"
+                  checked={input.color === "Yellow"}
+                  onChange={handleChange}
+                />{" "}
+                Yellow
+              </p>
+              <p className="radio">
+                <input
+                  type="radio"
+                  value="Blue"
+                  name="color"
+                  checked={input.color === "Blue"}
+                  onChange={handleChange}
+                />{" "}
+                Blue
+              </p>
+              <p className="radio">
+                <input
+                  type="radio"
+                  value="Purple"
+                  name="color"
+                  checked={input.color === "Purple"}
+                  onChange={handleChange}
+                />{" "}
+                Purple
+              </p>
+            </div>
+          </div>
+        </div>
         <input type="submit" value="Submit" onClick={createPost} />
       </form>
     </div>

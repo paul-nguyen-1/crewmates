@@ -16,25 +16,25 @@ const App = () => {
       id: "1",
       title: "Cartwheel in Chelsea 🤸🏽‍♀️",
       author: "Harvey Milian",
-      description: descr,
+      color:"White"
     },
     {
       id: "2",
       title: "Love Lock in Paris 🔒",
       author: "Beauford Delaney",
-      description: descr,
+      color:"Blue"
     },
     {
       id: "3",
       title: "Wear Pink on Fridays 🎀",
       author: "Onika Tonya",
-      description: descr,
+      color:"Red"
     },
     {
       id: "4",
       title: "Adopt a Dog 🐶",
       author: "Denise Michelle",
-      description: descr,
+      color:"White"
     },
   ];
 

@@ -16,7 +16,7 @@ const EditPost = ({ data }) => {
       .update({
         title: post.title,
         author: post.author,
-        description: post.description,
+        color: post.color
       })
       .eq("id", id);
 
@@ -49,9 +49,11 @@ const EditPost = ({ data }) => {
   }, []);
 
   return (
-    <div>
-      <form>
-        <label for="title">Title</label> <br />
+    <div className="createPost">
+  <form>
+    <div className="postCardContainer">
+      <div className="postCard">
+        <label for="title">Crewmate:</label>
         <input
           type="text"
           id="title"
@@ -59,10 +61,9 @@ const EditPost = ({ data }) => {
           value={post.title}
           onChange={handleChange}
         />
-        <br />
-        <br />
-        <label for="author">Author</label>
-        <br />
+      </div>
+      <div className="postCard">
+        <label for="author">Speed:</label>
         <input
           type="text"
           id="author"
@@ -70,26 +71,35 @@ const EditPost = ({ data }) => {
           value={post.author}
           onChange={handleChange}
         />
-        <br />
-        <br />
-        <label for="description">Description</label>
-        <br />
-        <textarea
-          rows="5"
-          cols="50"
-          id="description"
-          name="description"
-          value={post.description}
-          onChange={handleChange}
-        ></textarea>
-        <br />
-        <input type="submit" value="Submit" onClick={updatePost} />
-        <button className="deleteButton" onClick={deletePost}>
+      </div>
+      <div className="postCard" style={{ height: "100%", width:"175px" }}>
+        <label for="description">Color:</label>
+        <div className="radioButtons">
+          <p className="radio">
+            <input type="radio" value="Red" name="color" onChange={handleChange}/> Red
+          </p>
+          <p className="radio">
+            <input type="radio" value="Green" name="color" onChange={handleChange}/> Green
+          </p>
+          <p className="radio">
+            <input type="radio" value="Yellow" name="color" onChange={handleChange}/> Yellow
+          </p>
+          <p className="radio">
+            <input type="radio" value="Blue" name="color" onChange={handleChange}/> Blue
+          </p>
+          <p className="radio">
+            <input type="radio" value="Purple" name="color" onChange={handleChange}/> Purple
+          </p>
+        </div>
+      </div>
+    </div>
+    <input type="submit" value="Submit" onClick={updatePost} />
+    <button className="deleteButton" onClick={deletePost}>
           Delete
         </button>
-      </form>
-    </div>
-  );
+  </form>
+</div>
+  )
 };
 
 export default EditPost;

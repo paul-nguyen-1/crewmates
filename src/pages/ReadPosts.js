@@ -24,8 +24,7 @@ const ReadPosts = (props) => {
             id={post.id}
             title={post.title}
             author={post.author}
-            description={post.description}
-            bet={post.betCount}
+            color={post.color}
           />
         ))
       ) : (

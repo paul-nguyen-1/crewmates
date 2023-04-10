@@ -8,6 +8,7 @@
     margin-bottom: 25px;
     width: 400px;
     text-align: center;
+    background-color: red;
 }
 
 .title {
@@ -24,12 +25,13 @@
 
 .description {
     color:white;  
-    text-align: justify;
+    text-align: center;
     text-justify: inter-word;
     padding-left: 30px;
     padding-right: 30px;
     margin-bottom: 20px;
     font-size: 15px;
+
 }
 
 .betButton {

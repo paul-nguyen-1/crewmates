@@ -1,32 +1,16 @@
 import React from "react";
-import { useState } from "react";
 import "./Card.css";
-import more from "./more.png";
 import { Link } from "react-router-dom";
-import { supabase } from "../client";
 
-const Card = ({ id, title, author, description, bet }) => {
-  const [count, setCount] = useState(bet);
-
-  const updateCount = async () => {
-    await supabase
-      .from("Posts")
-      .update({ betCount: count + 1 })
-      .eq("id", id);
-    setCount((count) => count + 1);
-  };
-
+const Card = ({ id, title, author, color }) => {
   return (
     <div className="Card">
+      <h2 className="title">{"Crewmate: " + title}</h2>
+      <h3 className="author">{"Speed: " + author}</h3>
+      <h3 className="description">{"Color: " + color}</h3>
       <Link to={"edit/" + id}>
-        <img className="moreButton" alt="edit button" src={more} />
+        <button className="betButton">Edit Teammate</button>
       </Link>
-      <h2 className="title">{title}</h2>
-      <h3 className="author">{"by " + author}</h3>
-      <p className="description">{description}</p>
-      <button className="betButton" onClick={updateCount}>
-        👍 Bet Count: {count}
-      </button>
     </div>
   );
 };
