@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Card from "../components/Card";
 import { supabase } from "../client";
 
-const ReadPosts = (props) => {
+const ReadPosts = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -23,12 +23,12 @@ const ReadPosts = (props) => {
           <Card
             id={post.id}
             title={post.title}
-            author={post.author}
+            speed={post.speed}
             color={post.color}
           />
         ))
       ) : (
-        <h2>{"No Challenges Yet 😞"}</h2>
+        <h2>{"Nothing to see yet 😞"}</h2>
       )}
     </div>
   );

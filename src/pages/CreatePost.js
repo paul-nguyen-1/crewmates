@@ -5,7 +5,7 @@ import { supabase } from "../client";
 const CreatePost = () => {
   const [input, setInput] = useState({
     title: "",
-    author: "",
+    speed: "",
     color: "",
   });
 
@@ -24,7 +24,7 @@ const CreatePost = () => {
       .from("Posts")
       .insert({
         title: input.title,
-        author: input.author,
+        speed: input.speed,
         color: input.color,
       })
       .select();
@@ -33,7 +33,7 @@ const CreatePost = () => {
 
     setInput({
       title: "",
-      author: "",
+      speed: "",
       color: "",
     });
   };
@@ -53,12 +53,12 @@ const CreatePost = () => {
             />
           </div>
           <div className="postCard">
-            <label for="author">Speed:</label>
+            <label for="speed">Speed:</label>
             <input
               type="number"
-              id="author"
-              name="author"
-              value={input.author}
+              id="speed"
+              name="speed"
+              value={input.speed}
               onChange={handleChange}
             />
           </div>
@@ -108,12 +108,12 @@ const CreatePost = () => {
               <p className="radio">
                 <input
                   type="radio"
-                  value="Purple"
+                  value="Pink"
                   name="color"
-                  checked={input.color === "Purple"}
+                  checked={input.color === "Pink"}
                   onChange={handleChange}
                 />{" "}
-                Purple
+                Pink
               </p>
             </div>
           </div>
