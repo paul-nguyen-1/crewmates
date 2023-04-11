@@ -118,7 +118,7 @@ const CreatePost = () => {
             </div>
           </div>
         </div>
-        <input type="submit" value="Submit" onClick={createPost} />
+        <input type="submit" value="Submit" onClick={createPost} style={{height:"40px"}} />
       </form>
     </div>
   );

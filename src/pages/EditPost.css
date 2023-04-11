@@ -1,70 +1,64 @@
 input {
-    margin-top: 10px;
-    width: 150px !important;
-    border-radius: 8px;
-    border: 1px solid transparent;
-    font-size: 20px;
-    padding-left: 10px;
-  }
-  
-  label {
-    font-size: 12px;
-  }
-  
-  textarea {
-    border-radius: 8px;
-    width: 100%;
-    border: 1px solid transparent;
-    font-size: 20px;
-  }
-  
-  input[type="submit"] {
-    cursor: pointer;
-    align-self: center;
-  }
-  
-  input[type="submit"]:hover {
-    border-color: #646cff;
-  }
-  
-  .editCardContainer {
-    display: flex;
-    align-items: center;
-  }
-  
-  .createPost form {
-    display: flex;
-    justify-content: space-between;
-    flex-flow: column wrap;
-  }
-  
-  .createPost .editCard {
-    flex: 1;
-    margin: 10px 25px;
-  }
-  
-  .editCard {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column wrap;
-    height: 175px;
-    width: 225px;
-    background-color: gray;
-  }
-  
-  .radioButtons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column wrap;
-    font-size: 16px;
-  }
-  
-  .radio {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  
+  margin-top: 10px;
+  width: 150px !important;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+label {
+  font-size: 18px;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  align-self: center;
+}
+
+input[type="submit"]:hover {
+  border-color: #646cff;
+}
+
+.editCardContainer {
+  display: flex;
+  align-items: center;
+}
+
+.createPost form {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column wrap;
+}
+
+.createPost .editCard {
+  flex: 1;
+  margin: 10px 25px;
+  border-radius: 10px;
+  background-color: rgba(87, 87, 87, 0.393);
+}
+
+.editCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  height: 175px;
+  width: 225px;
+  background-color: gray;
+}
+
+.radioButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  font-size: 16px;
+}
+
+.radio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

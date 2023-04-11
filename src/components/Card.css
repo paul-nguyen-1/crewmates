@@ -1,4 +1,8 @@
 .Card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
     backdrop-filter: blur(2px);
     border: 1px solid rgba(153, 153, 153, 0.497);
     border-radius: 20px;
@@ -8,7 +12,7 @@
     margin-bottom: 25px;
     width: 400px;
     text-align: center;
-    background-color: red;
+    background-color: rgba(87, 87, 87, 0.393);
 }
 
 .title {

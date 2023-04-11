@@ -38,10 +38,7 @@ const EditPost = ({ data }) => {
 
   useEffect(() => {
     const fetchPost = async () => {
-      const { data} = await supabase
-        .from("Posts")
-        .select()
-        .eq("id", id);
+      const { data } = await supabase.from("Posts").select().eq("id", id);
       // console.log(data);
       setPost(data[0]);
     };
@@ -123,8 +120,25 @@ const EditPost = ({ data }) => {
             </div>
           </div>
         </div>
-        <input type="submit" value="Submit" onClick={updatePost} />
-        <button className="deleteButton" onClick={deletePost}>
+        <input
+          type="submit"
+          value="Submit"
+          onClick={updatePost}
+          style={{ height: "40px", fontSize:"18px" }}
+        />
+        <button
+          className="deleteButton"
+          onClick={deletePost}
+          style={{
+            height: "40px",
+            width: "150px",
+            alignSelf: "center",
+            fontSize: "18px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
           Delete
         </button>
       </form>
