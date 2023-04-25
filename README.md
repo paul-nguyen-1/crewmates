@@ -1,14 +1,10 @@
-# Web Development Project 7 - *Crewmates*
+# Web Development - *Crewmates*
 
 Submitted by: **Paul Nguyen**
 
-This web app: **CRUD Web Application**
+## Features
 
-Time spent: **3** hours spent in total
-
-## Required Features
-
-The following **required** functionality is completed:
+The following functionality is completed:
 
 - [x] **A create form allows users to add new cremates**
 - [x] **Users can name the crewmate and set the crewmate's attributes by clicking on one of several values**
